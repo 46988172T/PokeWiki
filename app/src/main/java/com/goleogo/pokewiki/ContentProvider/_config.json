@@ -1,0 +1,13 @@
+{
+  "syntaxVersion": 3,
+  "projectPackageId": "com.goleogo.pokewiki",
+  "authority": "com.goleogo.pokewiki.provider",
+  "providerJavaPackage": "com.goleogo.pokewiki.provider",
+  "providerClassName": "PokeWikiProvider",
+  "sqliteOpenHelperClassName": "PokeWikiSQLiteOpenHelper",
+  "sqliteOpenHelperCallbacksClassName": "PokeWikiSQLiteOpenHelperCallbacks",
+  "databaseFileName": "PokeWiki.db",
+  "databaseVersion": 1,
+  "enableForeignKeys": true,
+  "useAnnotations": true
+}

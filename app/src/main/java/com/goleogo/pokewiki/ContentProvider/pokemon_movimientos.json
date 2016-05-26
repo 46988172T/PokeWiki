@@ -1,0 +1,29 @@
+{
+  "documentation": "Join de Pokemon y Movimientos. Un pokemon puede tener varios movimientos, un movimiento puede ser de varios pokemon.",
+  "fields": [
+    {
+      "name": "pokemon_id",
+      "type": "String",
+      "nullable": false,
+      "foreignKey": {
+        "table": "pokemon",
+        "onDelete": "RESTRICT"
+      }
+    },
+    {
+      "name": "movimientos_id",
+      "type": "String",
+      "nullable": false,
+      "foreignKey": {
+        "table": "movimientos",
+        "onDelete": "RESTRICT"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "name": "unique_pokemon_movimiento",
+      "definition": "UNIQUE (pokemon_id, movimientos_id) ON CONFLICT REPLACE"
+    }
+  ]
+}

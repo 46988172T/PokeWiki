@@ -1,0 +1,27 @@
+{
+  "documentation": "Lista de tipos",
+  "fields": [
+    {
+      "documentation": "idTipos",
+      "name": "idTipos",
+      "type": "String"
+    },
+    {
+      "documentation": "nombre",
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "documentation": "generación",
+      "name": "generation",
+      "type": "Integer",
+      "nullable": false
+    }
+  ],
+  "constraints": [
+    {
+      "name": "unique_idTipos",
+      "definition": "UNIQUE (idTipos) ON CONFLICT REPLACE"
+    }
+  ]
+}

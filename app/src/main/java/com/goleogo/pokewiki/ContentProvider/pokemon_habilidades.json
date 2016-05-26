@@ -1,0 +1,29 @@
+{
+  "documentation": "Join de Pokemon y Habilidades. Un pokemon puede tener varios habilidades, una habilidad puede ser de varios pokemon.",
+  "fields": [
+    {
+      "name": "pokemon_id",
+      "type": "String",
+      "nullable": false,
+      "foreignKey": {
+        "table": "pokemon",
+        "onDelete": "RESTRICT"
+      }
+    },
+    {
+      "name": "habilidades_id",
+      "type": "String",
+      "nullable": false,
+      "foreignKey": {
+        "table": "habilidades",
+        "onDelete": "RESTRICT"
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "name": "unique_pokemon_habilidades",
+      "definition": "UNIQUE (pokemon_id, habilidades_id) ON CONFLICT REPLACE"
+    }
+  ]
+}

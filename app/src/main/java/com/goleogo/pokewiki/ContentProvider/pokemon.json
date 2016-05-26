@@ -1,0 +1,51 @@
+{
+  "documentation": "Lista de pokemon",
+  "fields": [
+    {
+      "documentation": "idPokemon",
+      "name": "idPokemon",
+      "type": "String"
+    },
+    {
+      "documentation": "nombre",
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "documentation": "tipo",
+      "name": "type",
+      "type": "String",
+      "nullable": false
+    },
+    {
+      "documentation": "experiencia_inicial",
+      "name": "base_experience",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "documentation": "peso",
+      "name": "weight",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "documentation": "altura",
+      "name": "height",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "documentation": "imagen",
+      "name": "image",
+      "type": "String",
+      "nullable": false
+    }
+  ],
+  "constraints": [
+    {
+      "name": "unique_idPokemon",
+      "definition": "UNIQUE (idPokemon) ON CONFLICT REPLACE"
+    }
+  ]
+}

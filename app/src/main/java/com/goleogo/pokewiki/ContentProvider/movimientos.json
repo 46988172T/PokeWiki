@@ -1,0 +1,39 @@
+{
+  "documentation": "Lista de movimientos",
+  "fields": [
+    {
+      "documentation": "idMovimiento",
+      "name": "idMovimiento",
+      "type": "String"
+    },
+    {
+      "documentation": "nombre",
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "documentation": "accuracy",
+      "name": "accuracy",
+      "type": "Integer",
+      "nullable": false
+    },
+    {
+      "documentation": "pp",
+      "name": "pp",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "documentation": "power",
+      "name": "height",
+      "type": "Integer",
+      "nullable": true
+    }
+  ],
+  "constraints": [
+    {
+      "name": "unique_idMovimiento",
+      "definition": "UNIQUE (idMovimiento) ON CONFLICT REPLACE"
+    }
+  ]
+}

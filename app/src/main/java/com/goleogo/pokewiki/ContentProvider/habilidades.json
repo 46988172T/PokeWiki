@@ -1,0 +1,27 @@
+{
+  "documentation": "Lista de habilidades",
+  "fields": [
+    {
+      "documentation": "idHabilidad",
+      "name": "idPokemon",
+      "type": "String"
+    },
+    {
+      "documentation": "nombre",
+      "name": "name",
+      "type": "String"
+    },
+    {
+      "documentation": "generación",
+      "name": "generation",
+      "type": "Integer",
+      "nullable": true
+    }
+  ],
+  "constraints": [
+    {
+      "name": "unique_idHabilidad",
+      "definition": "UNIQUE (idHabilidad) ON CONFLICT REPLACE"
+    }
+  ]
+}
