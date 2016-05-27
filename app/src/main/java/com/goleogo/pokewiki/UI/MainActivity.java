@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+       /* sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean boot = sharedPreferences.getBoolean(getString(R.string.boot), true);
 
         if (boot) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity
             Log.e("Llamando a API", "Llamando a API");
             RefreshBackground getTask = new RefreshBackground();
             getTask.execute();
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    class RefreshBackground extends AsyncTask {
+    /*class RefreshBackground extends AsyncTask {
 
         @Override
         protected Object doInBackground(Object[] params) {
@@ -127,5 +127,5 @@ public class MainActivity extends AppCompatActivity
 
             return null;
         }
-    }
+    }*/
 }
