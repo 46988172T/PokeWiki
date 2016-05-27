@@ -86,7 +86,7 @@ public class PokemonDetail extends FragmentActivity {
                 .into(imagenPokemon);
 
 
-        setupTabs();
+
         setupViewPager(viewPager);
         tabs.setupWithViewPager(viewPager);
 //
@@ -104,11 +104,7 @@ public class PokemonDetail extends FragmentActivity {
 
     }
 
-    private void setupTabs() {
-        tabs.addTab(tabs.newTab().setText("Types"));
-        tabs.addTab(tabs.newTab().setText("Abilities"));
-        tabs.addTab(tabs.newTab().setText("Moves"));
-    }
+
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());

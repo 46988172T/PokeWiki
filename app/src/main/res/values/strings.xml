@@ -13,4 +13,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_splash">PokeWiki</string>
+    <string name="instructions">Some instructions of use:
+        Look for all the Pokémon. To do this, you must use the side menu that opens when you press the button top left. In addition, you will also find details of the movements, abilities and types of the Pokémon. You will need internet access on your device for new updates, while the data is downloaded and saved to view the information later without internet access.
+    We hope you find it useful! Enjoy! </string>
 </resources>

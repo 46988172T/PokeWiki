@@ -6,33 +6,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-        <TextView
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="ID:" />
-
-        <TextView
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="47dp"
+                android:layout_height="48dp"
+                android:id="@+id/imageView2"
+                android:layout_alignBottom="@+id/textView"
+                android:src="@drawable/pokeball"
+                android:layout_alignEnd="@+id/textView" />
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:id="@+id/tvIdHabs" />
-    </LinearLayout>
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Name:" />
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/tvIdHabs" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:id="@+id/tvNameHabs" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/tvNameHabs" />
+        </LinearLayout>
+
     </LinearLayout>
 </LinearLayout>

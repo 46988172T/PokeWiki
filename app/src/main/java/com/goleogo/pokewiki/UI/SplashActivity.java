@@ -39,11 +39,10 @@ public class SplashActivity extends Activity {
             Log.e("Llamando a API", "Llamando a API");
             RefreshBackground getTask = new RefreshBackground();
             getTask.execute();
-        } else if (!boot) {
+        }else{
             Intent i = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(i);
         }
-
     }
 
 
@@ -86,7 +85,7 @@ public class SplashActivity extends Activity {
         @Override
         protected void onPostExecute(Object o) {
             super.onPostExecute(o);
-            progressDialog.dismiss();
+            //progressDialog.dismiss();
             Intent i = new Intent(getApplicationContext(),MainActivity.class);
             startActivity(i);
         }
