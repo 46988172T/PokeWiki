@@ -4,7 +4,7 @@
     {
       "documentation": "idMovimiento",
       "name": "idMovimiento",
-      "type": "String"
+      "type": "Integer"
     },
     {
       "documentation": "nombre",
@@ -20,12 +20,6 @@
     {
       "documentation": "pp",
       "name": "pp",
-      "type": "Integer",
-      "nullable": true
-    },
-    {
-      "documentation": "power",
-      "name": "height",
       "type": "Integer",
       "nullable": true
     }

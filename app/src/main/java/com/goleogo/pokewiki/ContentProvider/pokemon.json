@@ -4,18 +4,12 @@
     {
       "documentation": "idPokemon",
       "name": "idPokemon",
-      "type": "String"
+      "type": "Integer"
     },
     {
       "documentation": "nombre",
       "name": "name",
       "type": "String"
-    },
-    {
-      "documentation": "tipo",
-      "name": "type",
-      "type": "String",
-      "nullable": false
     },
     {
       "documentation": "experiencia_inicial",

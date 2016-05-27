@@ -4,7 +4,7 @@
     {
       "documentation": "idTipos",
       "name": "idTipos",
-      "type": "String"
+      "type": "Integer"
     },
     {
       "documentation": "nombre",
@@ -14,7 +14,7 @@
     {
       "documentation": "generación",
       "name": "generation",
-      "type": "Integer",
+      "type": "String",
       "nullable": false
     }
   ],

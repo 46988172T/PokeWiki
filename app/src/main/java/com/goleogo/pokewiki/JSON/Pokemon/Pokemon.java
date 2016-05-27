@@ -89,7 +89,8 @@ public class Pokemon {
      * @param types
      * @param forms
      */
-    public Pokemon(Integer id, String name, Integer baseExperience, Integer height, Boolean isDefault, Integer order, Integer weight, List<Ability> abilities, List<Form> forms, List<GameIndex> gameIndices, List<Object> heldItems, List<Object> locationAreaEncounters, List<Move> moves, Species species, Sprites sprites, List<Stat> stats, List<Type> types) {
+    public Pokemon(Integer id, String name, Integer baseExperience, Integer height, Boolean isDefault, Integer order, Integer weight, List<Ability> abilities,
+                   List<Form> forms, List<GameIndex> gameIndices, List<Object> heldItems, List<Object> locationAreaEncounters, List<Move> moves, Species species, Sprites sprites, List<Stat> stats, List<Type> types) {
         this.id = id;
         this.name = name;
         this.baseExperience = baseExperience;

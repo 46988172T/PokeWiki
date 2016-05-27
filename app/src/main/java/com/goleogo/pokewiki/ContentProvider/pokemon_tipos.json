@@ -3,7 +3,7 @@
   "fields": [
     {
       "name": "pokemon_id",
-      "type": "String",
+      "type": "Integer",
       "nullable": false,
       "foreignKey": {
         "table": "pokemon",
@@ -12,7 +12,7 @@
     },
     {
       "name": "tipos_id",
-      "type": "String",
+      "type": "Integer",
       "nullable": false,
       "foreignKey": {
         "table": "tipos",
