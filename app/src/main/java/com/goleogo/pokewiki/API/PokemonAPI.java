@@ -183,8 +183,7 @@ public class PokemonAPI {
     }
 
     public void getPokemonJoins(final Context context) {
-        Log.e("prueba", "yea");
-        for (int i = 1; i < 6; i++) {
+        for (int i = 1; i <= 15; i++) {
             Call<Pokemon> call = pokeApi.pokemon(String.valueOf(i));
             call.enqueue(new Callback<Pokemon>() {
                 @Override
@@ -192,30 +191,34 @@ public class PokemonAPI {
 
                     if (response.isSuccess()) {
                         Pokemon pokemon = response.body();
-                        for (int i = 0; i < pokemon.getTypes().size();i++){
+                        for (int t = 0; t < pokemon.getTypes().size();t++){
+
                             PokemonTiposContentValues pokemonTiposContentValues = new PokemonTiposContentValues();
                             pokemonTiposContentValues.putPokemonId(pokemon.getId());
-                            String urlTipo = pokemon.getTypes().get(0).getType().getUrl();
+                            String urlTipo = pokemon.getTypes().get(t).getType().getUrl();
                             String [] arrayTipos = urlTipo.split("/");
                             pokemonTiposContentValues.putTiposId(Integer.parseInt(arrayTipos[6]));
+                            Log.e("guardando tipos",pokemon.getId()+" con "+arrayTipos[6]);
                             context.getContentResolver().insert(PokemonTiposColumns.CONTENT_URI, pokemonTiposContentValues.values());
                         }
 
-                        for (int i = 0; i < pokemon.getAbilities().size();i++){
+                        for (int a = 0; a < pokemon.getAbilities().size();a++){
                             PokemonHabilidadesContentValues pokemonHabilidadesContentValues = new PokemonHabilidadesContentValues();
                             pokemonHabilidadesContentValues.putPokemonId(pokemon.getId());
-                            String urlHab = pokemon.getAbilities().get(i).getAbility().getUrl();
+                            String urlHab = pokemon.getAbilities().get(a).getAbility().getUrl();
                             String [] arrayHab = urlHab.split("/");
                             pokemonHabilidadesContentValues.putHabilidadesId(Integer.parseInt(arrayHab[6]));
+                            Log.e("guardando habs",pokemon.getId()+" con "+arrayHab[6]);
                             context.getContentResolver().insert(PokemonHabilidadesColumns.CONTENT_URI, pokemonHabilidadesContentValues.values());
                         }
 
-                        for (int i = 0; i < pokemon.getMoves().size();i++){
+                        for (int m = 0; m < pokemon.getMoves().size();m++){
                             PokemonMovimientosContentValues pokemonMovimientosContentValues = new PokemonMovimientosContentValues();
                             pokemonMovimientosContentValues.putPokemonId(pokemon.getId());
-                            String urlMov = pokemon.getMoves().get(i).getMove().getUrl();
+                            String urlMov = pokemon.getMoves().get(m).getMove().getUrl();
                             String [] arrayMov = urlMov.split("/");
                             pokemonMovimientosContentValues.putMovimientosId(Integer.parseInt(arrayMov[6]));
+                            Log.e("guardando movs",pokemon.getId()+" con "+arrayMov[6]);
                             context.getContentResolver().insert(PokemonMovimientosColumns.CONTENT_URI, pokemonMovimientosContentValues.values());
                         }
                     }

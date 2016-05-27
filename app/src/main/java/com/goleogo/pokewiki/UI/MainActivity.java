@@ -2,6 +2,7 @@ package com.goleogo.pokewiki.UI;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -42,15 +43,6 @@ public class MainActivity extends AppCompatActivity
             RefreshBackground getTask = new RefreshBackground();
             getTask.execute();
         }
-
-        Button button = (Button)findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                RefreshBackground getTask = new RefreshBackground();
-                getTask.execute();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -106,10 +98,14 @@ public class MainActivity extends AppCompatActivity
             startActivity(i);
         } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.oficial) {
+            Intent i = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://www.pokemon.com/es/"));
+            startActivity(i);
+        } else if (id == R.id.api) {
+            Intent i = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("http://www.pokeapi.co"));
+            startActivity(i);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
